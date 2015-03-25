@@ -9,7 +9,7 @@ module Wrxer
     end
 
     def posts
-      @posts ||= Post.new(document).lazy
+      @posts ||= PostCollection.new(document).lazy
     end
 
     def inspect
