@@ -2,8 +2,12 @@ require "wrxer/version"
 require 'nokogiri'
 
 require 'wrxer/attribute'
+require 'wrxer/collection_attribute'
 require 'wrxer/wrxer_object'
+require 'wrxer/wrxer_collection'
+
 require 'wrxer/post'
+require 'wrxer/post_collection'
 
 require 'wrxer/parser'
 
