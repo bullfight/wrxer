@@ -19,7 +19,7 @@ describe Wrxer::PostCollection do
     end
 
     it 'returns second post' do
-      expect(subject[1].title).to eq "Avenged Sevenfold On Rockline Radio."
+      expect(subject.entries[1].title).to eq "Avenged Sevenfold On Rockline Radio."
     end
   end
 end
