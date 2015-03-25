@@ -22,7 +22,7 @@ module Wrxer
     attr_reader :document, :root
     def initialize(document)
       @root = self.class.instance_variable_get(:@root)
-      if document.name = @root
+      if document.name == @root
         @document = document
       else
         @document = document.at_xpath(@root)
