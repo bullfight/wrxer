@@ -1,6 +1,7 @@
 # Wrxer
 
-TODO: Write a gem description
+This gem is a simple parser for Wordpress eXtended RSS.  At the moment it only
+supports a few of the exported objects and attributes that I find useful.
 
 ## Installation
 
@@ -20,7 +21,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Wrxer can be user to parse posts from a Wordpress export. Take a look at
+`lib/wrxer/post` to see which attributes are supported.
+
+```ruby
+parser = Wrxer.parse("export.xml")
+=> <Wrxer::Parser ...>
+post = parser.posts.first
+=> <Wrxer::Post title: "Foo" ..>
+post.title "Foo Bar Baz"
+```
 
 ## Contributing
 
