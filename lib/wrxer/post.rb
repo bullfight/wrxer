@@ -2,6 +2,7 @@ require 'time'
 
 module Wrxer
   class Post < WrxerObject
+    root "//channel//item"
     attribute :title, "//title"
     attribute :content, "//content:encoded"
     attribute :excerpt, "//excerpt:encoded"

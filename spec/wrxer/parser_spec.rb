@@ -8,7 +8,7 @@ describe Wrxer::Parser do
     expect(subject.document).to be_an Nokogiri::XML::Document
   end
 
-  it 'parses document' do
-    expect(subject.call).to eq nil
+  it 'parses posts' do
+    expect(subject.posts.first).to be_an Wrxer::Post
   end
 end

@@ -1,6 +1,10 @@
 module Wrxer
   class WrxerObject
     include Enumerable
+    def self.root(value)
+      @root = value
+    end
+
     def self.attribute(value, xpath, parser = nil)
       @attributes ||= []
       @attributes << Attribute.new(value, xpath, parser)
@@ -8,12 +12,14 @@ module Wrxer
 
     def self.inherited(subclass)
       super
+      subclass.instance_variable_set(:@root, @root)
       subclass.instance_variable_set(:@attributes, @attributes)
     end
 
-    attr_reader :document
+    attr_reader :document, :root
     def initialize(document)
-      @document = document
+      @root = self.class.instance_variable_get(:@root)
+      @document = document.xpath(@root)
     end
 
     def attributes

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Wrxer::Post do
   let(:filename) { fixture('wrx.xml') }
   let(:document) { Nokogiri::XML(filename.read) }
-  subject { described_class.new(document.xpath("//channel//item").first) }
+  subject { described_class.new(document) }
 
   it 'has a title' do
     expect(subject.title).to eq "Deathbat News"
