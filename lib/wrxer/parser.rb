@@ -11,5 +11,9 @@ module Wrxer
     def posts
       @posts ||= Post.new(document).entries
     end
+
+    def inspect
+      "#<#{self.class}:0x#{self.object_id.to_s(16)}> { filename: #{@filename.to_path}, document: #{@document.class} }"
+    end
   end
 end
