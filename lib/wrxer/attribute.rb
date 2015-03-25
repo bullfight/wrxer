@@ -9,7 +9,7 @@ module Wrxer
     end
 
     def text(document)
-      @text ||= document.at_xpath(xpath).text
+      @text = document.at_xpath(xpath).text
     end
   end
 end
