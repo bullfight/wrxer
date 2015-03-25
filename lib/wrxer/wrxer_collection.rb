@@ -16,9 +16,6 @@ module Wrxer
       self.class.instance_variable_get(:@collection)
     end
 
-    def [](key)
-      data.to_a[key]
-    end
 
     def each(&block)
       document.xpath(collection.xpath).each do |item|
