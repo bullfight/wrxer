@@ -8,7 +8,8 @@ module Wrxer
       end
     end
 
-    def call
+    def posts
+      @posts ||= Post.new(document).entries
     end
   end
 end

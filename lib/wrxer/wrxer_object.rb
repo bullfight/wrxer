@@ -34,7 +34,7 @@ module Wrxer
 
     def each(&block)
       document.each do |item|
-        block.call(self.new(item))
+        block.call(self.class.new(item))
       end
     end
   end
