@@ -4,7 +4,7 @@ module Wrxer
     include Enumerable
 
     def self.collection(value, xpath, parser)
-      @collection = CollectionAttribute.new(value, xpath, parser)
+      @collection = Attribute.new(value, xpath, parser)
     end
 
     def self.inherited(subclass)

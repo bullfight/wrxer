@@ -1,15 +1,13 @@
 module Wrxer
   class Attribute < Struct.new(:name, :xpath, :parser)
-    def call(document)
+    def call(document, params = {})
       if parser
-        parser.call(text(document))
+        parser.call(document, {xpath: xpath})
       else
-        text(document)
+        document.at_xpath(xpath).text
       end
     end
 
-    def text(document)
-      @text = document.at_xpath(xpath).text
     end
   end
 end

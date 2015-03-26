@@ -1,6 +1,6 @@
 module Wrxer
   class WrxerObject
-    def self.call(document)
+    def self.call(document, params = {})
       self.new(document)
     end
 
