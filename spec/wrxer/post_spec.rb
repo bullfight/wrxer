@@ -5,7 +5,7 @@ describe Wrxer::Post do
   let(:document) { Nokogiri::XML(filename.read).xpath('//channel').at_xpath('item')}
   subject { described_class.new(document) }
 
-  it 'has a title' do
+  it 'has an id' do
     expect(subject.id).to eq 3
   end
 
