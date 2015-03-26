@@ -5,6 +5,7 @@ require 'wrxer/attribute'
 require 'wrxer/wrxer_object'
 require 'wrxer/wrxer_collection'
 
+require 'wrxer/category'
 require 'wrxer/post'
 require 'wrxer/post_collection'
 

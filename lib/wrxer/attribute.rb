@@ -23,6 +23,15 @@ module Wrxer
     end
   end
 
+  class ElementAttribute
+    def self.call(document, params = {})
+      document.attributes[params[:xpath].to_s].value
+    end
+  end
+
+  class ChildAttribute
+    def self.call(document, params = {})
+      document.children.text
     end
   end
 end

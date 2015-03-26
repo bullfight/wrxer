@@ -29,6 +29,10 @@ describe Wrxer::Post do
     expect(subject.published_at).to eq Time.parse("2007-11-17 21:30:51")
   end
 
+  it 'has a category' do
+    expect(subject.category).to be_a Wrxer::Category
+  end
+
   it 'does not have a not foo' do
     expect { subject.foo }.to raise_error(
       NoMethodError, "undefined method 'foo' for Wrxer::Post")

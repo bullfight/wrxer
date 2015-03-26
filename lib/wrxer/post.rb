@@ -7,5 +7,6 @@ module Wrxer
     attribute :excerpt, "excerpt:encoded"
     attribute :slug, 'wp:post_name'
     attribute :published_at, 'wp:post_date_gmt', TimeAttribute
+    attribute :category, "category", Category
   end
 end
