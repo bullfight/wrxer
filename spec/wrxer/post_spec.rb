@@ -6,6 +6,10 @@ describe Wrxer::Post do
   subject { described_class.new(document) }
 
   it 'has a title' do
+    expect(subject.id).to eq 3
+  end
+
+  it 'has a title' do
     expect(subject.title).to eq "Welcome To Deathbat News."
   end
 
