@@ -1,7 +1,11 @@
 module Wrxer
   class WrxerObject
     def self.call(document, params = {})
-      self.new(document)
+      unless document.name == @root
+        document = document.at_xpath(@root)
+      end
+
+      document.nil? ? nil : self.new(document)
     end
 
     def self.root(value)
@@ -22,11 +26,7 @@ module Wrxer
     attr_reader :document, :root
     def initialize(document)
       @root = self.class.instance_variable_get(:@root)
-      if document.name == @root
-        @document = document
-      else
-        @document = document.at_xpath(@root)
-      end
+      @document = document
     end
 
     def attributes
