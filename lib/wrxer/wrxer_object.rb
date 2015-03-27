@@ -8,7 +8,7 @@ module Wrxer
       @root = value
     end
 
-    def self.attribute(value, xpath, parser = nil)
+    def self.attribute(value, xpath, parser = TextAttribute)
       @attributes ||= []
       @attributes << Attribute.new(value, xpath, parser)
     end

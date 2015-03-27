@@ -3,11 +3,13 @@ require 'time'
 module Wrxer
   class Attribute < Struct.new(:name, :xpath, :parser)
     def call(document, params = {})
-      if parser
-        parser.call(document, {xpath: xpath})
-      else
-        document.at_xpath(xpath).text
-      end
+      parser.call(document, { xpath: xpath })
+    end
+  end
+
+  class TextAttribute
+    def self.call(document, params = {})
+      document.at_xpath(params[:xpath]).text
     end
   end
 
