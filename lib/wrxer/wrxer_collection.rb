@@ -8,8 +8,8 @@ module Wrxer
     end
 
     def self.inherited(subclass)
-      super
       subclass.instance_variable_set(:@collection, @collection)
+      super
     end
 
     def collection

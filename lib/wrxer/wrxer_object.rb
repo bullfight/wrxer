@@ -14,9 +14,9 @@ module Wrxer
     end
 
     def self.inherited(subclass)
-      super
       subclass.instance_variable_set(:@root, @root)
       subclass.instance_variable_set(:@attributes, @attributes)
+      super
     end
 
     attr_reader :document, :root
