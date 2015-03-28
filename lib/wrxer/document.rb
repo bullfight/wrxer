@@ -11,6 +11,7 @@ module Wrxer
     attribute :base_blog_url, "wp:base_blog_url"
     attribute :author, "wp:author", Author
     attribute :generator
+    attribute :image, "image", Image
     attribute :posts, "item", PostCollection
   end
 end

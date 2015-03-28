@@ -18,6 +18,10 @@ describe Wrxer::Document do
       expect(subject.author).to be_a Wrxer::Author
     end
 
+    it 'has an image' do
+      expect(subject.image).to be_a Wrxer::Image
+    end
+
     it 'has posts' do
       expect(subject.posts.first).to be_a Wrxer::Post
     end
