@@ -38,6 +38,10 @@ describe Wrxer::Post do
       expect(subject.is_sticky).to eq 0
     end
 
+    it 'has postmetas' do
+      expect(subject.postmetas.first).to be_a Wrxer::Postmeta
+    end
+
     it 'does not have a not foo' do
       expect { subject.foo }.to raise_error(
         NoMethodError, "undefined method 'foo' for Wrxer::Post")

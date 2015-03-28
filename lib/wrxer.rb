@@ -9,6 +9,8 @@ require 'wrxer/wrxer_object'
 require 'wrxer/wrxer_collection'
 
 require 'wrxer/category'
+require 'wrxer/postmeta'
+require 'wrxer/postmeta_collection'
 require 'wrxer/post'
 require 'wrxer/post_collection'
 require 'wrxer/author'

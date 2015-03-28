@@ -3,6 +3,15 @@ module Wrxer
   class WrxerCollection < WrxerObject
     include Enumerable
 
+    def self.call(document, params = {})
+      root = @xpath || params[:xpath]
+      unless document.name == root
+        document = document.xpath(root)
+      end
+
+      document.nil? ? nil : self.coerce(document)
+    end
+
     def self.collection(value, xpath, parser)
       @collection = Attribute.new(value, xpath, parser)
     end

@@ -18,5 +18,6 @@ module Wrxer
     attribute :type, "wp:post_type"
     attribute :is_sticky, "wp:is_sticky", IntegerAttribute
     attribute :category, "category", Category
+    attribute :postmetas, 'item', PostmetaCollection
   end
 end
