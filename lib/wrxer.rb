@@ -1,6 +1,7 @@
 require "wrxer/version"
 require 'nokogiri'
 
+require 'wrxer/coercion'
 require 'wrxer/attribute'
 require 'wrxer/wrxer_object'
 require 'wrxer/wrxer_collection'
