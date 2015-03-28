@@ -23,7 +23,7 @@ describe Wrxer::Post do
     end
 
     it 'has a slug' do
-      expect(subject.slug).to eq "welcome-to-deathbat-news"
+      expect(subject.name).to eq "welcome-to-deathbat-news"
     end
 
     it 'has a post date' do
@@ -32,6 +32,10 @@ describe Wrxer::Post do
 
     it 'has a category' do
       expect(subject.category).to be_a Wrxer::Category
+    end
+
+    it 'has is_sticky' do
+      expect(subject.is_sticky).to eq 0
     end
 
     it 'does not have a not foo' do
@@ -50,7 +54,7 @@ describe Wrxer::Post do
     end
 
     it 'returns nil for text' do
-      expect(subject.slug).to eq nil
+      expect(subject.name).to eq nil
     end
 
     it 'returns nil for time' do
