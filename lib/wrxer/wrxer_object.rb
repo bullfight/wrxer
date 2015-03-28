@@ -1,8 +1,8 @@
 module Wrxer
   class WrxerObject < Coercion
-    def self.attribute(value, xpath, parser = TextAttribute)
+    def self.attribute(name, xpath, coercion = TextAttribute)
       @attributes ||= []
-      @attributes << Attribute.new(value, xpath, parser)
+      @attributes << Attribute.new(name, xpath, coercion)
     end
 
     def self.inherited(subclass)
