@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Wrxer::PostCollection do
   let(:filename) { fixture('wrx.xml') }
   let(:document) { Nokogiri::XML(filename.read) }
-  subject { described_class.new(document) }
+  subject { described_class.call(document) }
 
   describe 'collection' do
     it 'has an enumerator' do

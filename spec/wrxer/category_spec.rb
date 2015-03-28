@@ -4,7 +4,7 @@ describe Wrxer::Category do
   describe "valid document" do
     let(:filename) { fixture('wrx.xml') }
     let(:document) { Nokogiri::XML(filename.read).xpath('//channel').at_xpath('item').at_xpath('category') }
-    subject { described_class.new(document) }
+    subject { described_class.call(document) }
 
     it 'has a domain' do
       expect(subject.domain).to eq "category"
