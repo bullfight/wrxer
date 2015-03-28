@@ -14,6 +14,10 @@ describe Wrxer::Document do
       expect(subject.link).to eq "https://deathbatnews.wordpress.com"
     end
 
+    it 'has an author' do
+      expect(subject.author).to be_a Wrxer::Author
+    end
+
     it 'has posts' do
       expect(subject.posts.first).to be_a Wrxer::Post
     end

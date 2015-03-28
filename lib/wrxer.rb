@@ -11,6 +11,7 @@ require 'wrxer/wrxer_collection'
 require 'wrxer/category'
 require 'wrxer/post'
 require 'wrxer/post_collection'
+require 'wrxer/author'
 require 'wrxer/document'
 
 require 'wrxer/parser'
