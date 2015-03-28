@@ -19,5 +19,6 @@ module Wrxer
     attribute :is_sticky, "wp:is_sticky", IntegerAttribute
     attribute :category, "category", Category
     attribute :postmetas, 'item', PostmetaCollection
+    attribute :comments, 'item', CommentCollection
   end
 end
