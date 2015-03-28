@@ -1,5 +1,3 @@
-require 'time'
-
 module Wrxer
   class Attribute < Struct.new(:name, :xpath, :coercion)
     def call(document, params = {})

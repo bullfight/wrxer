@@ -1,5 +1,7 @@
 require "wrxer/version"
 require 'nokogiri'
+require 'time'
+
 
 require 'wrxer/coercion'
 require 'wrxer/attribute'
