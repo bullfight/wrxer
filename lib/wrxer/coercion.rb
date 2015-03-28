@@ -1,8 +1,13 @@
 module Wrxer
   class Coercion
+    def self.xpath(value)
+      @xpath = value
+    end
+
     def self.call(document, params = {})
-      unless document.name == params[:xpath]
-        document = document.at_xpath(params[:xpath])
+      root = @xpath || params[:xpath]
+      unless document.name == root
+        document = document.at_xpath(root)
       end
 
       document.nil? ? nil : self.coerce(document)
