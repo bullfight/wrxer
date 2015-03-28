@@ -1,6 +1,6 @@
 module Wrxer
   class Post < WrxerObject
-    root "item"
+    xpath "item"
     attribute :id, "wp:post_id", IntegerAttribute
     attribute :title, "title"
     attribute :content, "content:encoded"

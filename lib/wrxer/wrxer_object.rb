@@ -1,31 +1,17 @@
 module Wrxer
-  class WrxerObject
-    def self.call(document, params = {})
-      unless document.name == @root
-        document = document.at_xpath(@root)
-      end
-
-      document.nil? ? nil : self.new(document)
-    end
-
-    def self.root(value)
-      @root = value
-    end
-
+  class WrxerObject < Coercion
     def self.attribute(value, xpath, parser = TextAttribute)
       @attributes ||= []
       @attributes << Attribute.new(value, xpath, parser)
     end
 
     def self.inherited(subclass)
-      subclass.instance_variable_set(:@root, @root)
       subclass.instance_variable_set(:@attributes, @attributes)
       super
     end
 
-    attr_reader :document, :root
+    attr_reader :document
     def initialize(document)
-      @root = self.class.instance_variable_get(:@root)
       @document = document
     end
 
