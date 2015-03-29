@@ -29,17 +29,22 @@ module Wrxer
       raise NoMethodError.new("undefined method '#{name}' for #{self.class}")
     end
 
-    def to_s
-      to_hash
+    def to_s(*args)
+      JSON.pretty_generate(to_hash)
     end
 
     def inspect
-      "#<#{self.class}:0x#{self.object_id.to_s(16)}> Attributes: " + to_hash.to_s
+      "#<#{self.class}:0x#{self.object_id.to_s(16)}> Attributes: " + JSON.pretty_generate(to_hash)
+    end
+
+    def to_json(*args)
+      JSON.generate(to_hash)
     end
 
     def to_hash
       attributes.inject({}) do |acc, (key, value)|
-        acc[key.name] = key.call(document)
+        value = key.call(document)
+        acc[key.name] = value.respond_to?(:to_hash) ? value.to_hash : value
         acc
       end
     end
