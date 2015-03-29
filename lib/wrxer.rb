@@ -25,6 +25,6 @@ require 'wrxer/parser'
 
 module Wrxer
   def self.parse(file)
-    Parser.new(file)
+    Parser.new(file).call
   end
 end

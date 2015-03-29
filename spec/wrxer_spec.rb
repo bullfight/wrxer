@@ -9,6 +9,6 @@ describe Wrxer do
   end
 
   it 'parses a file' do
-    expect(subject.parse(filename)).to be_an Wrxer::Parser
+    expect(subject.parse(filename)).to be_an Wrxer::Document
   end
 end
