@@ -5,10 +5,10 @@ describe Wrxer::Parser do
   subject { described_class.new(filename) }
 
   it 'loads xml document' do
-    expect(subject.document).to be_an Nokogiri::XML::Document
+    expect(subject).to be_an Wrxer::Parser
   end
 
-  it 'parses posts' do
-    expect(subject.posts.first).to be_an Wrxer::Post
+  it 'returns a wrxer document' do
+    expect(subject.call).to be_an Wrxer::Document
   end
 end
