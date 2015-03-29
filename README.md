@@ -1,7 +1,14 @@
 # Wrxer
 
-This gem is a simple parser for Wordpress eXtended RSS.  At the moment it only
-supports a few of the exported objects and attributes that I find useful.
+This gem is a simple parser for Wordpress eXtended RSS.  At the moment it
+supports many of the parameters related to posts, it doesn't currenly support
+page exports.
+
+The document and its attributes can be easily converted to json or a ruby hash
+by calling `#to_hash` or `#to_json`.  Collections like PostCollection,
+PostmetaCollection, and CommentCollection are returned as lazy enuemrables
+when converting the document to a hash or json, but can be enumerated to
+retrieve the hash or json objects.
 
 ## Installation
 
