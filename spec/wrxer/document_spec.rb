@@ -7,11 +7,11 @@ describe Wrxer::Document do
     subject { described_class.call(document) }
 
     it 'has a title' do
-      expect(subject.title).to eq "Deathbat News"
+      expect(subject.title).to eq "Wrxer News"
     end
 
     it 'has a link' do
-      expect(subject.link).to eq "https://deathbatnews.wordpress.com"
+      expect(subject.link).to eq "https://wrxernews.wordpress.com"
     end
 
     it 'has an author' do

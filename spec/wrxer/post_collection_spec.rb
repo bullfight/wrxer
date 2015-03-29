@@ -15,11 +15,11 @@ describe Wrxer::PostCollection do
     end
 
     it 'returns first post' do
-      expect(subject.first.title).to eq "Welcome To Deathbat News."
+      expect(subject.first.title).to eq "Welcome To Wrxer News."
     end
 
     it 'returns second post' do
-      expect(subject.entries[1].title).to eq "Avenged Sevenfold On Rockline Radio."
+      expect(subject.entries[1].title).to eq "Wrxer on the Radio"
     end
   end
 end

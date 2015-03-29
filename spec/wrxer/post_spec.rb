@@ -11,7 +11,7 @@ describe Wrxer::Post do
     end
 
     it 'has a title' do
-      expect(subject.title).to eq "Welcome To Deathbat News."
+      expect(subject.title).to eq "Welcome To Wrxer News."
     end
 
     it 'has a content' do
@@ -23,7 +23,7 @@ describe Wrxer::Post do
     end
 
     it 'has a slug' do
-      expect(subject.name).to eq "welcome-to-deathbat-news"
+      expect(subject.name).to eq "welcome-to-wrxer-news"
     end
 
     it 'has a post date' do

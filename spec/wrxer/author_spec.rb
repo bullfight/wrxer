@@ -7,7 +7,7 @@ describe Wrxer::Author do
     subject { described_class.call(document) }
 
     it 'has a login' do
-      expect(subject.login).to eq "deathbatnews"
+      expect(subject.login).to eq "wrxernews"
     end
   end
 end

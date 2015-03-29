@@ -11,11 +11,11 @@ describe Wrxer::Category do
     end
 
     it 'has a nicename' do
-      expect(subject.nicename).to eq "avenged-sevenfold"
+      expect(subject.nicename).to eq "wrxer-news"
     end
 
     it 'has a body' do
-      expect(subject.body).to eq "Avenged Sevenfold"
+      expect(subject.body).to eq "Wrxer News"
     end
   end
 
