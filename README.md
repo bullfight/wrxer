@@ -83,7 +83,9 @@ post = document.posts.first
     "data": "#<Enumerator::Lazy:0x007fa8f315a3f8>"
   }
 }
-post.title Welcome To Wrxer News."
+post.title
+=> "Welcome To Wrxer News."
+
 ```
 
 ## Contributing
