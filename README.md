@@ -31,6 +31,22 @@ Or install it yourself as:
 Wrxer can be user to parse posts from a Wordpress export. Take a look at
 `lib/wrxer/post` to see which attributes are supported.
 
+### Parse from File
+
+```ruby
+document = Wrxer.parse("dir/to/export.xml")
+=> #<Wrxer::Document:0x3fd8091d3488> Attributes: ...
+```
+
+### Parse from URI
+
+```ruby
+document = Wrxer.parse_uri("https://raw.githubusercontent.com/bullfight/wrxer/master/spec/fixtures/wrx.xml")
+=> #<Wrxer::Document:0x3fd8091d3488> Attributes: ...
+```
+
+### Reading a parsed document
+
 ```ruby
 document = Wrxer.parse("export.xml")
 => #<Wrxer::Document:0x3fd8091d3488> Attributes: {
