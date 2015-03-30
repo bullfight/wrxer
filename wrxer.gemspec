@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "wrxer"
   spec.version       = Wrxer::VERSION
   spec.authors       = ["Patrick Schmitz"]
-  spec.email         = ["pat@reccenter.com"]
+  spec.email         = ["p.schmitz@gmail.com"]
   spec.summary       = %q{Parse a wordpress WRX export document}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/bullfight/wrxer"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
