@@ -1,5 +1,7 @@
 # Wrxer
 
+[![Build Status](https://travis-ci.org/bullfight/wrxer.svg?branch=master)](https://travis-ci.org/bullfight/wrxer)
+
 This gem is a simple parser for Wordpress eXtended RSS.  At the moment it
 supports many of the parameters related to posts, it doesn't currenly support
 page exports.
