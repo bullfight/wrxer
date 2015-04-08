@@ -1,5 +1,6 @@
 module Wrxer
-  class Image < WrxerObject
+  class Image
+    include Model
     xpath 'image'
     attribute :url
     attribute :title

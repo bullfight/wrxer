@@ -1,5 +1,6 @@
 module Wrxer
-  class Author < WrxerObject
+  class Author
+    include Model
     xpath 'wp:author'
     attribute :login, "wp:author_login"
     attribute :email, "wp:autor_email"

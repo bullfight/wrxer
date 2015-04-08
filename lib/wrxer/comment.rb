@@ -1,5 +1,6 @@
 module Wrxer
-  class Comment < WrxerObject
+  class Comment
+    include Model
     xpath 'comment'
     attribute :id, IntegerAttribute
     attribute :author, "wp:comment_author"

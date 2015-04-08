@@ -1,5 +1,6 @@
 module Wrxer
-  class Post < WrxerObject
+  class Post
+    include Wrxer::Model
     xpath "item"
     attribute :title
     attribute :link

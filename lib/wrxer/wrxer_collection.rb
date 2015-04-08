@@ -1,6 +1,7 @@
 module Wrxer
 
-  class WrxerCollection < WrxerObject
+  class WrxerCollection
+    include Model
     include Enumerable
 
     def self.call(document, params = {})

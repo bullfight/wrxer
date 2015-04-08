@@ -1,42 +1,52 @@
 module Wrxer
-  class Coercion
-    def self.xpath(value)
-      @xpath = value
-    end
-
-    def self.call(document, params = {})
-      root = @xpath || params[:xpath]
-      unless document.name == root
-        document = document.at_xpath(root)
+  module Coercion
+    module ClassMethods
+      def xpath(value)
+        @xpath = value
       end
 
-      document.nil? ? nil : self.coerce(document)
+      def call(document, params = {})
+        root = @xpath || params[:xpath]
+        unless document.name == root
+          document = document.at_xpath(root)
+        end
+
+        document.nil? ? nil : self.coerce(document)
+      end
+
+      def coerce(document)
+        self.new(document)
+      end
     end
 
-    def self.coerce(document)
-      self.new(document)
+    def self.included(base)
+      base.extend(ClassMethods)
     end
   end
 
-  class TextAttribute < Coercion
+  class TextAttribute
+    include Coercion
     def self.coerce(document)
       document.text
     end
   end
 
-  class IntegerAttribute < Coercion
+  class IntegerAttribute
+    include Coercion
     def self.coerce(document)
       Integer(document.text)
     end
   end
 
-  class TimeAttribute < Coercion
+  class TimeAttribute
+    include Coercion
     def self.coerce(document)
       Time.parse(document.text)
     end
   end
 
-  class ElementAttribute < Coercion
+  class ElementAttribute
+    include Coercion
     def self.call(document, params = {})
       element = document.attributes[params[:xpath].to_s]
       element.nil? ? nil : self.coerce(element)
@@ -47,7 +57,8 @@ module Wrxer
     end
   end
 
-  class ChildAttribute < Coercion
+  class ChildAttribute
+    include Coercion
     def self.call(document, params = {})
       child = document.children
       child.empty? ? nil : self.coerce(child)

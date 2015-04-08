@@ -1,5 +1,6 @@
 module Wrxer
-  class Document < WrxerObject
+  class Document
+    include Model
     xpath '//channel'
     attribute :title
     attribute :link

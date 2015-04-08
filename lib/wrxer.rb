@@ -6,8 +6,8 @@ require 'open-uri'
 
 
 require 'wrxer/coercion'
+require 'wrxer/model'
 require 'wrxer/attribute'
-require 'wrxer/wrxer_object'
 require 'wrxer/wrxer_collection'
 
 require 'wrxer/category'
