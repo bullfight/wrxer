@@ -6,9 +6,9 @@ require 'open-uri'
 
 
 require 'wrxer/coercion'
-require 'wrxer/model'
 require 'wrxer/attribute'
-require 'wrxer/wrxer_collection'
+require 'wrxer/model'
+require 'wrxer/collection'
 
 require 'wrxer/category'
 require 'wrxer/postmeta'

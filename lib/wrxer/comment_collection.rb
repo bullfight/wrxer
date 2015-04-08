@@ -1,5 +1,6 @@
 module Wrxer
-  class CommentCollection < WrxerCollection
+  class CommentCollection
+    include Collection
     xpath "item"
     collection :comments, "//wp:comment", Comment
   end

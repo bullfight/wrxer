@@ -1,5 +1,6 @@
 module Wrxer
-  class PostmetaCollection < WrxerCollection
+  class PostmetaCollection
+    include Collection
     xpath "item"
     collection :postmeta, "//wp:postmeta", Postmeta
   end

@@ -1,5 +1,7 @@
 module Wrxer
-  class PostCollection < WrxerCollection
+  class PostCollection
+    include Collection
+
     xpath "//channel"
     collection :posts, "//item", Post
   end
